@@ -1,5 +1,6 @@
 package com.xiaoli.controller;
 
+import com.sun.xml.internal.txw2.annotation.XmlElement;
 import com.xiaoli.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorld {
     @Autowired
     private User user;
-
     @RequestMapping("/")
-    String home() {
-        return "Hello World ! my name is " + user.getName();
+    User home() {
+        return user;
     }
 }

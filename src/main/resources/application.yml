@@ -1,5 +1,28 @@
-xiaoli:
-        child:
-              name: xiaoxiaoli
-        wife:
-              name: xiaoyue
+spring:
+      profiles: dev
+
+person:
+      name: xiaoli
+---
+
+spring:
+      profiles: pro
+
+person:
+      name: xiaoguo
+
+---
+
+spring:
+      profiles: test
+
+person:
+      sex: 1
+---
+spring:
+    profiles: testinclude
+---
+#激活指定的配置
+spring:
+  profiles:
+    active: testinclude
